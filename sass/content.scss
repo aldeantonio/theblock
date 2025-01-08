@@ -87,3 +87,48 @@
   }
 }
 
+.ps-content {
+  margin: 50px 0;
+  border-top: 1px solid $color-black;
+
+  h2 {
+    color: $color-red;
+    margin: 50px 0;
+    font-size: 50px;
+  }
+}
+
+
+.ps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  .work-item {
+    position: relative;
+    height: 460px;
+
+
+    .item-content{
+      position: absolute;
+      bottom: 0;
+      z-index: 5;
+      padding: 35px;
+      color: $color-white;
+    }
+
+    &::before {
+      content: "";
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: transparent linear-gradient(182deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+      z-index: 1;
+    }
+
+  }
+}
