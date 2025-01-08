@@ -42,6 +42,9 @@
 
 .info {
   margin: 100px 0;
+  @include mobile {
+    margin: 50px 0;
+  }
 }
 
 .i-header { 
@@ -49,10 +52,10 @@
   @include mobile {
     width: 100%;
   }
-  h1 { 
-    font-size: 80px;
+  h2 { 
+    font-size: 50px;
     @include mobile {
-      font-size: 50px;
+      font-size: 35px;
     }  
   }
   p {
@@ -101,10 +104,13 @@
   margin: 50px 0;
   border-top: 1px solid $color-black;
 
-  h2 {
+  h2 { 
     color: $color-red;
     margin: 50px 0;
     font-size: 50px;
+    @include mobile {
+      font-size: 35px;
+    }  
   }
 }
 
