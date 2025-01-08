@@ -7,6 +7,9 @@
 
 .b-header { 
   width: 80%;
+  @include mobile {
+    width: 100%;
+  }
   h1 { 
     font-size: 80px;
     @include mobile {
@@ -16,6 +19,7 @@
   p {
     font-size: 35px;
     line-height: 1.2;
+    margin: 20px 0;
     @include mobile {
       font-size: 25px;
     }
