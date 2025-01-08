@@ -1,0 +1,240 @@
+// Header
+header {
+  width: 100%;
+  @include mobile {
+    padding: 0 20px;
+  }
+  z-index: 10;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px 0;
+  }
+
+  .logo img {
+    max-height: 120px;
+    @include mobile {
+      max-width: 100px;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin-right: 20px;
+      @include mobile {
+        display: none;
+      }
+
+      li {
+        margin-left: 1.5rem;
+
+        a {
+          color: $color-black;
+          text-decoration: none;
+          &:hover {
+            color: $color-red;
+        }
+      }
+    }
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      span {
+        display: flex;
+        background-color: $color-black;
+        height: 3px;
+        width: 53px;
+        // margin-bottom: 11px;
+      }
+    }
+  }
+}
+
+/* Quando o usuário faz scroll, adiciona a classe "scrolled" */
+header.scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ao rolar */
+}
+
+/* Configuração inicial */
+.hidemenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.5s ease; /* Animação de deslizamento */
+  z-index: 1000;
+}
+
+.hidemenu.active {
+  right: 0; /* Desliza para dentro da tela */
+}
+
+.hidemenu .links {
+  list-style: none;
+  text-align: center;
+
+  li {
+    margin: 1.5rem 0;
+
+    a {
+      color: $color-white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-red; /* Ajuste a cor conforme sua paleta */
+      }
+    }
+  }
+}
+
+/* Menu ícone */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001; /* Fica acima do menu */
+  position: relative;
+
+  span {
+    background-color: $color-black;
+    height: 3px;
+    width: 35px;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    span:nth-child(2) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+    span:nth-child(3) {
+      opacity: 0;
+    }
+  }
+}
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001; /* Fica acima do menu */
+  position: relative;
+
+  span {
+    background-color: $color-black;
+    height: 3px;
+    width: 35px;
+    transition: all 0.3s ease;
+  }
+
+  /* Quando o menu está ativo */
+  &.active {
+    span:nth-child(1),
+    span:nth-child(3) {
+      transform: translateY(10px); /* Movem-se para formar o traço único */
+    }
+    span:nth-child(2) {
+      transform: scaleX(1.2); /* Expande um pouco o sinal de menos */
+    }
+    span:nth-child(1),
+    span:nth-child(3) {
+      opacity: 0; /* Faz desaparecer as bordas */
+    }
+  }
+}
+}
+// Seção de footer
+footer {
+  background-color: $color-red;
+  .f-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 35px;
+      color: $color-white;
+      padding: 50px 0;
+      @include tablet {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+
+  .f-logo {
+    img {
+      width: 350px;
+      height: auto;
+    }
+    p {
+      font-size: 18px;
+      line-height: 26px
+    }
+  }
+
+  .f-local {
+    h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .f-contacto, .f-social {
+    h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 18px;
+    }
+  }
+
+  .copyright {
+    background-color: $color-white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      color: $color-black;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+}

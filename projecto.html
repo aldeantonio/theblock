@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atípiko Brands</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.svg" alt="Atípiko Brands Logo" />
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#work">Our Work</a></li>
+          </ul>
+          <div class="hidemenu">
+            <ul class="links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#work">Our Work</a></li>
+              <li><a href="#work">Services</a></li>
+              <li><a href="#work">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+  
+  <section class="grid-projects">
+    <div class="container">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Todas</button>
+            <button class="btn" onclick="filterSelection('negocios')"> Negocios</button>
+            <button class="btn" onclick="filterSelection('arte')"> Arte</button>
+            <button class="btn" onclick="filterSelection('cultura')"> Cultura</button>
+            <button class="btn" onclick="filterSelection('tec')"> Tecnologia</button>
+        </div>
+        <div class="p-content">
+
+            <a href="#">
+                <div class="p-item cover-image filterDiv arte">
+                    <img src="images/studio.jpeg" alt="">
+
+                    <div class="item-content">
+                        <h3>GoGerir</h3>
+                        <p>Brand Identity</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="p-item cover-image filterDiv cultura">    
+                    <img src="images/studio.jpeg" alt="">
+
+                    <div class="item-content">
+                        <h3>GoGerir</h3>
+                        <p>Brand Identity</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="p-item cover-image filterDiv arte">
+                    <img src="images/studio.jpeg" alt="">
+
+                    <div class="item-content">
+                        <h3>GoGerir</h3>
+                        <p>Brand Identity</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="p-item cover-image filterDiv cultura">    
+                    <img src="images/studio.jpeg" alt="">
+
+                    <div class="item-content">
+                        <h3>GoGerir</h3>
+                        <p>Brand Identity</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

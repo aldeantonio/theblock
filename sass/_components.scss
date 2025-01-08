@@ -1,0 +1,67 @@
+// Botão básico
+.button {
+  display: inline-block;
+  background-color: $color-black;
+  padding: 12px 25px;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($color-black, 10%);
+    color: white;
+    transform: scale(1.05);
+    border: none;
+  }
+
+  @include mobile {
+    padding: $space-small;
+  }
+}
+
+.btn-white {
+  display: inline-block;
+  border: 2px solid white;
+  padding: 12px 25px;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgb(0, 41, 17);
+    border: 2px solid rgb(0, 41, 17);
+    padding: 12px 25px;
+
+    color: white;
+    border: none;
+  }
+
+  @include mobile {
+    padding: $space-small;
+  }
+}
+
+// // Cartão básico
+// .card {
+//   background-color: white;
+//   border: 1px solid $secondary-color;
+//   padding: $space-medium;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+//   @include mobile {
+//     padding: $space-small;
+//   }
+
+//   .card-title {
+//     font-size: $font-size-medium;
+//     margin-bottom: $space-small;
+//   }
+
+//   .card-text {
+//     font-size: $font-size-base;
+//     color: $secondary-color;
+//   }
+// }

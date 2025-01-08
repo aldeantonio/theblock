@@ -1,0 +1,25 @@
+
+
+
+// Fontes
+@font-face {
+    font-family: "Community Gothic";
+    src: url("../fonts/Community-gothic-bold.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;700&display=swap');
+
+$font-primary: "Inter", sans-serif;
+$font-secondary: "Community Gothic", sans-serif;
+
+
+// Cores
+$color-red: #FE3636;
+$color-black: #000000;
+$color-white: #ffffff;
+
+// Espaçamento
+$space-small: 20px;
+$space-medium: 35px;
+$space-large: 50px;
+$space-xlarge: 100px;
