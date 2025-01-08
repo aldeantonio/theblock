@@ -2,6 +2,10 @@
 
 .blocker {
   margin: 100px 0;
+  @include mobile {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
 
 }
 
@@ -13,6 +17,7 @@
   h1 { 
     color: $color-red;
     font-size: 80px;
+    padding-bottom: 0;
     @include mobile {
       font-size: 50px;
     }  
@@ -22,7 +27,7 @@
     line-height: 1.2;
     margin: 20px 0;
     @include mobile {
-      font-size: 25px;
+      font-size: 20px;
     }
   }
 }
@@ -55,12 +60,15 @@
     line-height: 1.2;
     margin: 20px 0;
     @include mobile {
-      font-size: 25px;
+      font-size: 20px;
     }
   }
 }
 
 .i-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 50%;
   @include mobile {
     width: 100%;
@@ -70,6 +78,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $color-black;
+    padding-bottom: 10px;
   }
 }
 
@@ -84,6 +93,7 @@
   height: 550px;
   @include mobile {
     height: 250px;
+    margin-bottom: 25px;
   }
 }
 
