@@ -7,10 +7,12 @@
     src: url("../fonts/Community-gothic-bold.ttf");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 
 $font-primary: "Inter", sans-serif;
-$font-secondary: "Community Gothic", sans-serif;
+$font-secondary: "Community Gothic","Libre Franklin", sans-serif;
 
 
 // Cores
