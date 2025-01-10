@@ -23,7 +23,7 @@
       font-size: 50px;
     }  
   }
-  
+
   p {
     font-size: 35px;
     line-height: 1.2;
@@ -128,6 +128,9 @@
   .work-item {
     position: relative;
     height: 460px;
+    @include mobile {
+      height: 250px;
+    }
 
 
     .item-content{
