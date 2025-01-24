@@ -1,5 +1,6 @@
 // Header
 header {
+  position: fixed;
   width: 100%;
   @include mobile {
     padding: 0 20px;
@@ -36,7 +37,7 @@ header {
         margin-left: 1.5rem;
 
         a {
-          color: $color-black;
+          color: $color-white;
           text-decoration: none;
           &:hover {
             color: $color-red;
