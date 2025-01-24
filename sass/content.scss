@@ -1,155 +1,39 @@
 
 
-.blocker {
-  margin: 100px 0;
-  @include mobile {
-    margin-top: 50px;
-    margin-bottom: 20px;
-  }
+.hero {
+  position: relative;
+  height: 98dvh;
 
-}
+  .hero-content {
+    position: absolute;
+    width: 40%;
+    color: white;
+    bottom: 50%;
 
-.b-header { 
-  width: 80%;
-  @include mobile {
-    width: 100%;
-  }
+    h1 {
+      font-size: 80px;
+      line-height: 1.3;
+      color: white;
 
-  h1 { 
-    color: $color-red;
-    font-size: 80px;
-    padding-bottom: 0;
-    @include mobile {
-      font-size: 50px;
-    }  
-  }
-
-  p {
-    font-size: 35px;
-    line-height: 1.2;
-    margin: 20px 0;
-    @include mobile {
-      font-size: 20px;
-    }
-  }
-}
-
-.b-content {
-  width: 100%;
-  height: 550px;
-  @include mobile {
-    height: 250px;
-  }
-}
-
-.info {
-  margin: 100px 0;
-  @include mobile {
-    margin: 50px 0;
-  }
-}
-
-.i-header { 
-  width: 80%;
-  @include mobile {
-    width: 100%;
-  }
-  h2 { 
-    font-size: 50px;
-    @include mobile {
-      font-size: 35px;
-    }  
-  }
-  p {
-    font-size: 25px;
-    line-height: 1.2;
-    margin: 20px 0;
-    @include mobile {
-      font-size: 18px;
-    }
-  }
-}
-
-.i-tags {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 50%;
-  @include mobile {
-    width: 100%;
-  }
-
-  .item-tag {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid $color-black;
-    padding-bottom: 10px;
-  }
-}
-
-
-.projects {
-
-}
-
-.p-item {
-  margin-bottom: 50px;
-  width: 100%;
-  height: 550px;
-  @include mobile {
-    height: 250px;
-    margin-bottom: 25px;
-  }
-}
-
-.ps-content {
-  margin: 50px 0;
-  border-top: 1px solid $color-black;
-
-  h2 { 
-    color: $color-red;
-    margin: 50px 0;
-    font-size: 50px;
-    @include mobile {
-      font-size: 35px;
-    }  
-  }
-}
-
-
-.ps-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-  @include mobile {
-    grid-template-columns: 1fr;
-  }
-
-  .work-item {
-    position: relative;
-    height: 460px;
-    @include mobile {
-      height: 250px;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: solid white 2px;
+      }
     }
 
-
-    .item-content{
-      position: absolute;
-      bottom: 0;
-      z-index: 5;
-      padding: 35px;
-      color: $color-white;
+    p {
+      margin: 50px 0;
     }
 
-    &::before {
-      content: "";
-      position: relative;
-      display: flex;
-      width: 100%;
-      height: 100%;
-      background: transparent linear-gradient(182deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
-      z-index: 1;
+    
+    .button {
+      background-color: white;
+      padding: 15px 30px;
+      color: black;
+      border-radius: 50px;
     }
-
   }
 }
